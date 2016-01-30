@@ -2,7 +2,7 @@
 
 require_once 'tests/units/Base.php';
 
-use Kanboard\Plugin\ReverseProxyAuth\Plugin;
+use Kanboard\Plugin\ReverseProxyLdap\Plugin;
 
 class PluginTest extends Base
 {
