@@ -20,6 +20,6 @@ Installation
 Configuration
 -------------
 
-- You must have LDAP configured in proxy mode in Kanboard
-- Reverse-Proxy server configured correctly, the config parameter `REVERSE_PROXY_USER_HEADER` must be defined
+- You must have [LDAP configured in proxy mode in Kanboard](http://kanboard.net/documentation/ldap-authentication)
+- [Reverse-Proxy server configured correctly](http://kanboard.net/documentation/reverse-proxy-authentication), the config parameter `REVERSE_PROXY_USER_HEADER` must be defined
 - You **don't need** to set to `true` those constants: `LDAP_AUTH` and `REVERSE_PROXY_AUTH`

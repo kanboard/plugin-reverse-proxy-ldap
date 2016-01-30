@@ -10,7 +10,7 @@ php:
 
 env:
   global:
-    - PLUGIN=ReverseProxyAuth
+    - PLUGIN=ReverseProxyLdap
     - KANBOARD_REPO=https://github.com/fguillot/kanboard.git
   matrix:
     - DB=sqlite
