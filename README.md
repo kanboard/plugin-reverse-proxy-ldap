@@ -1,6 +1,8 @@
 Reverse-Proxy Authentication plugin with LDAP support for Kanboard
 ==================================================================
 
+[![Build Status](https://travis-ci.org/kanboard/plugin-reverse-proxy-ldap.svg?branch=master)](https://travis-ci.org/kanboard/plugin-reverse-proxy-ldap)
+
 Authenticate users with Reverse-Proxy method but populate user information from the LDAP directory.
 
 Author
