@@ -63,4 +63,19 @@ class ReverseProxyLdapAuth extends ReverseProxyAuth
 
         return false;
     }
+
+    /**
+     * Check if the user session is valid
+     *
+     * @access public
+     * @return boolean
+     */
+    public function isValidSession()
+    {
+        if (LDAP_USERNAME_CASE_SENSITIVE) {
+            return $this->request->getRemoteUser() === $this->userSession->getUsername();
+        }
+
+        return strtolower($this->request->getRemoteUser()) === strtolower($this->userSession->getUsername());
+    }
 }
