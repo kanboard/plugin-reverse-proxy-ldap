@@ -6,6 +6,7 @@ use Kanboard\Auth\ReverseProxyAuth;
 use Kanboard\Core\Ldap\Client as LdapClient;
 use Kanboard\Core\Ldap\ClientException as LdapException;
 use Kanboard\Core\Ldap\User as LdapUser;
+use LogicException;
 
 /**
  * Reverse-Proxy Ldap Authentication Provider
@@ -53,10 +54,8 @@ class ReverseProxyLdapAuth extends ReverseProxyAuth
                 }
 
                 $this->userInfo = $user;
-
                 return true;
             }
-
         } catch (LdapException $e) {
             $this->logger->error($e->getMessage());
         }
