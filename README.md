@@ -3,7 +3,7 @@ Reverse-Proxy Authentication plugin with LDAP support for Kanboard
 
 [![Build Status](https://travis-ci.org/kanboard/plugin-reverse-proxy-ldap.svg?branch=master)](https://travis-ci.org/kanboard/plugin-reverse-proxy-ldap)
 
-Authenticate users with Reverse-Proxy method but populate user information from the LDAP directory.
+Authenticate users with the reverse-proxy method but populate user information from the LDAP directory.
 
 Author
 ------
@@ -32,6 +32,8 @@ Note: Plugin folder is case-sensitive.
 Configuration
 -------------
 
-- You must have [LDAP configured in proxy mode in Kanboard](https://kanboard.net/documentation/ldap-authentication)
+- You must have [LDAP authentication configured in Kanboard](https://kanboard.net/documentation/ldap-authentication)
 - [Reverse-Proxy server configured correctly](https://kanboard.net/documentation/reverse-proxy-authentication), the config parameter `REVERSE_PROXY_USER_HEADER` must be defined
-- You **don't need** to set to `true` those constants: `LDAP_AUTH` and `REVERSE_PROXY_AUTH`
+- You don't need to set the constant `LDAP_AUTH`
+- The constant `REVERSE_PROXY_AUTH` must not be set or set to `false`
+- The LDAP authentication can be configured in anonymous or proxy mode
